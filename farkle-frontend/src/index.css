@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+#Game{
+    background-image: url("../img/woodenBackgound.jfif");
+    height: 100%;
+    height: 1080px;
+    width: 100%;
+}
+
+#playercards{
+    width: 15%;
+    display: flex;
+}
+
+#gameField{
+    width: 85%;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.player-card{
+    max-height: 200px;
+    max-width: 270px;
+    background-image: url("../img/paperBackground.jfif");
+}
+
+.player-1-card{
+    float: top;
+}
+
+.player-2-card{
+    float:bottom;
+}
