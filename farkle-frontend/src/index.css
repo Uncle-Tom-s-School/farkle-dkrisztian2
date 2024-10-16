@@ -1,38 +1,144 @@
-*{
-    box-sizing: border-box;
+@font-face {
+    font-family: MedievalSharp;
+    src: url(assets/fonts/MedievalSharp-Regular.ttf);
+  }
+  
+  :root{
+    --tab-bg: rgb(36, 37, 77);
+  }
+  
+  *{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(221, 221, 221);
+  }
+  
+  #root{
+    min-height: 100vh;
+    width: 100%;
+    /* overflow: hidden; */
+    background-color: rgb(6, 5, 36);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  aside.left{
+    margin-left: 10px;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 10px;
+  }
+  
+  .tab{
+    background-color: var(--tab-bg);
+    box-shadow: 0px 0px 15px rgb(52, 51, 100);
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(199, 199, 199);
+  
+    display: flex;
+    flex-direction: column;
+  
+    div{
+      border-top: 1px solid black;
+      padding: 5px;
+    }
+  
+    .stored{
+      background-color: rgb(12, 11, 53);
+      color: var(--tab-bg);
+      border: none;
+      border-radius: 5px;
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
+
+    h1{
+        margin-bottom: 10px;
+    }
+  
+    h2{
+      text-align: right;
+    }
+
+    h3{
+        margin-bottom: 5px;
+    }
+  }
+  
+  aside.right{
+    margin-right: 10px;
+    max-width: 220px;
+    min-width: 220px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+
   }
 
-#Game{
-    background-image: url("../img/woodenBackgound.jfif");
-    height: 100%;
-    height: 1080px;
-    width: 100%;
-}
+  .controlButton{
+    font-size: 1.5rem;
+      background-color: var(--tab-bg);
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+      height: 80px;
+      width: 200px;
+      margin-bottom: 15px;
+  }
 
-#playercards{
-    width: 15%;
+  .controlButton:hover{
+    box-shadow: 0px 0px 15px rgb(66, 62, 114);
+    cursor: pointer;
+    color: white;
+  }
+  
+  .dice-holder{
+    display: block;
+    position: relative;
+    aspect-ratio: 1;
+    width: 110px;
+  }
+  
+  .dice{
+    width: 110px;
+    background-color: rgb(40, 35, 66);
+    aspect-ratio: 1;
     display: flex;
-}
-
-#gameField{
-    width: 85%;
-}
-
-.text-right{
-    text-align: right;
-}
-
-.player-card{
-    max-height: 200px;
-    max-width: 270px;
-    background-image: url("../img/paperBackground.jfif");
-}
-
-.player-1-card{
-    float: top;
-}
-
-.player-2-card{
-    float:bottom;
-}
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(16, 16, 36);
+    box-shadow: 0px 0px 15px rgb(38, 37, 71);
+    border-radius: 5px;
+    font-size: 2.15rem;
+    position: absolute;
+  }
+  
+  main>div{
+      height: 35vh;
+      max-width: 50vh;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 50px;
+  }
+  
+  .selected-dice{
+    border: 1px solid rgb(30, 29, 65);
+    box-shadow: 0px 0px 35px 7px rgb(47, 46, 94);
+    font-weight: bold;
+  }

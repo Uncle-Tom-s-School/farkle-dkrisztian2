@@ -1,24 +1,19 @@
-import PlayerCard from '../components/PlayerCard'
-
-const TOTAL: number = 5000
+import Controls from '../components/Controls'
+import GameTable from '../components/GameTable'
+import Tab from '../components/Tab'
 
 const Home = () => {
   return (
-    <div id="Game">
-        <div id='playerCards'>
-            <div className='player-1-card'>
-                <PlayerCard currentDiceValue={400} total={TOTAL} bankedPoints={1000} subTotalforRound={400}/>
-            </div>
-
-            <div className='player-2-card'>
-                <PlayerCard currentDiceValue={100} total={TOTAL} bankedPoints={1000} subTotalforRound={500}/>
-            </div>
-        </div>
-
-        <div id='gameField'>
-
-        </div>
-    </div>   
+    <>
+      <aside className='left'>
+        <Tab targetNumber={5000} player='P1'/>
+        <Tab targetNumber={5000} player='P2'/>
+      </aside>
+      <GameTable />   
+      <aside className='right'>
+      <Controls/>
+      </aside>
+    </>
   )
 }
 
