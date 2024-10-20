@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 
 export type TabProps = {
     targetNumber: number,

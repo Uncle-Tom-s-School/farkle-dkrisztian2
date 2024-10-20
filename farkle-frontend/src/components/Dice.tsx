@@ -10,8 +10,7 @@ const Dice = () => {
 
   return (
     <div className='dice-holder'>
-        <div className={isSelected? 'dice selected-dice':'dice'} 
-        
+        <div className={isSelected? 'dice selected-dice':'dice'}       
         onClick={toggleDice}
         >{value}</div>
     </div>

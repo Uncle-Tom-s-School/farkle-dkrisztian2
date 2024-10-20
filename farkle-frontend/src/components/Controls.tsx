@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Dice from './Dice'
 
 const Roll = () => {
 
@@ -11,7 +10,6 @@ const Bank = () =>{
 
 const Controls = () => {
   const [rolled, setRolled] = useState(false)
-
 
   return (
     <>
